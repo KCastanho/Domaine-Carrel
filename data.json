@@ -1,0 +1,30 @@
+
+{
+  "pousses": 15,
+  "parcelles": [
+    {
+      "nom": "Parcelle Haut",
+      "meteo": [
+        { "jour": "Lundi", "temperature": 9, "pluie": 3 },
+        { "jour": "Mardi", "temperature": 12, "pluie": 14 },
+        { "jour": "Mercredi", "temperature": 13, "pluie": 4 },
+        { "jour": "Jeudi", "temperature": 11, "pluie": 11 },
+        { "jour": "Vendredi", "temperature": 16, "pluie": 0 },
+        { "jour": "Samedi", "temperature": 14, "pluie": 22 },
+        { "jour": "Dimanche", "temperature": 10, "pluie": 5 }
+      ]
+    },
+    {
+      "nom": "Parcelle Bas",
+      "meteo": [
+        { "jour": "Lundi", "temperature": 11, "pluie": 12 },
+        { "jour": "Mardi", "temperature": 12, "pluie": 2 },
+        { "jour": "Mercredi", "temperature": 15, "pluie": 0 },
+        { "jour": "Jeudi", "temperature": 9, "pluie": 15 },
+        { "jour": "Vendredi", "temperature": 13, "pluie": 18 },
+        { "jour": "Samedi", "temperature": 12, "pluie": 1 },
+        { "jour": "Dimanche", "temperature": 11, "pluie": 11 }
+      ]
+    }
+  ]
+}

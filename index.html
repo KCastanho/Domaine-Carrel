@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaine Carrel - Alerte Mildiou</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Domaine Carrel</h1>
+            <p>Outil de prévention du mildiou</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="introduction">
+            <h2>Tableau de bord</h2>
+            <p>
+                Consultez les prévisions météorologiques
+                et les risques de mildiou de vos parcelles.
+            </p>
+            <span class="info">Données de démonstration</span>
+        </section>
+
+        <section class="regle">
+            <h2>Règle des 3 × 10</h2>
+
+            <div class="conditions">
+                <div class="condition">
+                    <h3>Température</h3>
+                    <strong>&gt; 10 °C</strong>
+                </div>
+
+                <div class="condition">
+                    <h3>Précipitations</h3>
+                    <strong>&gt; 10 mm</strong>
+                </div>
+
+                <div class="condition">
+                    <h3>Pousses de vigne</h3>
+                    <strong>&gt; 10 cm</strong>
+                </div>
+            </div>
+
+            <p>Une alerte est générée si les trois conditions sont réunies.</p>
+        </section>
+
+        <section class="previsions">
+            <h2>Prévisions sur 7 jours</h2>
+            <div id="resultats">
+                Chargement des données...
+            </div>
+        </section>
+
+        <section class="alerte">
+            <h2>SMS d'alerte quotidien</h2>
+
+            <label for="jour">Sélectionner un jour :</label>
+
+            <select id="jour">
+                <option value="Lundi">Lundi</option>
+                <option value="Mardi">Mardi</option>
+                <option value="Mercredi">Mercredi</option>
+                <option value="Jeudi">Jeudi</option>
+                <option value="Vendredi">Vendredi</option>
+                <option value="Samedi">Samedi</option>
+                <option value="Dimanche">Dimanche</option>
+            </select>
+
+            <div id="sms" aria-live="polite">
+                Chargement du message...
+            </div>
+
+            <p class="info">Simulation du SMS — aucun envoi réel.</p>
+        </section>
+
+        <section class="avertissement">
+            <h3>Aide à la décision</h3>
+            <p>
+                Cet outil fournit une estimation du risque de mildiou.
+                L'absence d'alerte ne garantit pas l'absence de maladie.
+                La décision finale de traitement appartient au vigneron.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Domaine Carrel — Prototype d'aide à la décision</p>
+    </footer>
+
+</body>
+</html>
