@@ -1,5 +1,8 @@
 
-/* Variables */
+/* ==============================
+   VARIABLES
+   ============================== */
+
 :root {
     --primary: #244c3a;
     --background: #f5f6f2;
@@ -11,7 +14,10 @@
     --success: #15803d;
 }
 
-/* Configuration générale */
+/* ==============================
+   CONFIGURATION GÉNÉRALE
+   ============================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +37,23 @@ body {
     padding: 0 24px;
 }
 
-/* En-tête */
+section {
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+/* ==============================
+   EN-TÊTE
+   ============================== */
+
 header {
     background: var(--primary);
     color: var(--white);
@@ -48,23 +70,13 @@ header p {
     font-size: 15px;
 }
 
-/* Contenu principal */
-main {
-    padding-top: 32px !important;
-    padding-bottom: 32px !important;
-}
+/* ==============================
+   CONTENU PRINCIPAL
+   ============================== */
 
-section {
-    margin-bottom: 24px;
-}
-
-h2 {
-    font-size: 22px;
-    margin-bottom: 12px;
-}
-
-h3 {
-    font-size: 15px;
+main.container {
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .introduction p {
@@ -78,10 +90,14 @@ h3 {
     font-size: 13px;
 }
 
-/* Cartes */
+/* ==============================
+   CARTES
+   ============================== */
+
 .regle,
 .parcelle,
 .alerte,
+.environnement,
 .avertissement {
     background: var(--white);
     border: 1px solid var(--border);
@@ -90,7 +106,10 @@ h3 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
-/* Règle des 3 × 10 */
+/* ==============================
+   RÈGLE DES 3 × 10
+   ============================== */
+
 .conditions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -120,7 +139,10 @@ h3 {
     font-size: 14px;
 }
 
-/* Prévisions météorologiques */
+/* ==============================
+   PRÉVISIONS MÉTÉOROLOGIQUES
+   ============================== */
+
 #resultats {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -137,7 +159,10 @@ h3 {
     margin-bottom: 20px;
 }
 
-/* Tableaux */
+/* ==============================
+   TABLEAUX
+   ============================== */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -166,7 +191,15 @@ tbody tr:hover {
     background: #f8faf8;
 }
 
-/* Indicateurs de risque */
+.table-responsive {
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+/* ==============================
+   INDICATEURS DE RISQUE
+   ============================== */
+
 .danger,
 .safe {
     display: inline-block;
@@ -186,7 +219,10 @@ tbody tr:hover {
     color: var(--success);
 }
 
-/* SMS quotidien */
+/* ==============================
+   SMS QUOTIDIEN
+   ============================== */
+
 .alerte label {
     display: block;
     margin-bottom: 8px;
@@ -205,7 +241,9 @@ select {
     min-width: 200px;
 }
 
-select:focus {
+select:focus,
+input:focus,
+button:focus-visible {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
 }
@@ -220,7 +258,232 @@ select:focus {
     line-height: 1.8;
 }
 
-/* Avertissement */
+#sms.sms-danger {
+    background: #fef2f2;
+    border-left-color: var(--danger);
+    color: #991b1b;
+}
+
+/* ==============================
+   SUIVI ENVIRONNEMENTAL
+   ============================== */
+
+.environnement > p {
+    color: var(--muted);
+}
+
+.environnement > .info {
+    display: block;
+}
+
+.indicateurs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.indicateur {
+    padding: 20px;
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.indicateur h3 {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.indicateur strong {
+    display: block;
+    color: var(--primary);
+    font-size: 28px;
+    margin: 8px 0;
+    letter-spacing: -0.5px;
+}
+
+.indicateur p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.indicateur strong.positif {
+    color: var(--success);
+}
+
+.indicateur strong.negatif {
+    color: var(--danger);
+}
+
+/* ==============================
+   OPPORTUNITÉ COMMERCIALE
+   ============================== */
+
+.objectif-export {
+    background: #edf3ee;
+    border-left: 4px solid var(--primary);
+    padding: 24px;
+    border-radius: 8px;
+    margin: 24px 0;
+}
+
+.export-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.objectif-export strong {
+    display: block;
+    font-size: 30px;
+    color: var(--primary);
+    margin: 8px 0;
+}
+
+.objectif-export h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.objectif-export p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* ==============================
+   OBJECTIF ENVIRONNEMENTAL
+   ============================== */
+
+.objectif {
+    padding: 20px;
+    background: #f3f8f3;
+    border: 1px solid #d7e6d7;
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+.objectif h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.objectif p {
+    font-size: 14px;
+}
+
+.objectif strong {
+    color: var(--success);
+}
+
+/* ==============================
+   FORMULAIRE
+   ============================== */
+
+#form-traitement {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 20px 0 16px;
+}
+
+.champ label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.champ input,
+.champ select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.champ input::placeholder {
+    color: #929c96;
+}
+
+.filtre-annee {
+    max-width: 200px;
+    margin-top: 16px;
+}
+
+#statut-traitements {
+    display: block;
+    margin: 12px 0 24px;
+}
+
+/* ==============================
+   BOUTONS
+   ============================== */
+
+.btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: inherit;
+}
+
+.btn:hover {
+    background: #193b2b;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#form-traitement .btn {
+    grid-column: 1 / -1;
+}
+
+#rapport-btn {
+    margin-bottom: 12px;
+}
+
+.btn-supprimer {
+    background: #fee2e2;
+    color: var(--danger);
+    border: none;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-supprimer:hover {
+    background: #fecaca;
+}
+
+.historique-vide {
+    color: var(--muted);
+    text-align: center;
+    padding: 24px;
+}
+
+/* ==============================
+   AVERTISSEMENT
+   ============================== */
+
 .avertissement {
     background: #fffaf0;
     border-color: #eee2c9;
@@ -235,7 +498,10 @@ select:focus {
     font-size: 14px;
 }
 
-/* Pied de page */
+/* ==============================
+   PIED DE PAGE
+   ============================== */
+
 footer {
     text-align: center;
     padding: 24px;
@@ -243,17 +509,42 @@ footer {
     font-size: 13px;
 }
 
-/* Responsive */
+/* ==============================
+   RESPONSIVE — TABLETTES
+   ============================== */
+
 @media (max-width: 900px) {
+
     #resultats {
         grid-template-columns: 1fr;
     }
+
+    .indicateurs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
+/* ==============================
+   RESPONSIVE — MOBILES
+   ============================== */
+
 @media (max-width: 600px) {
+
     .container {
         padding-left: 16px;
         padding-right: 16px;
+    }
+
+    header {
+        padding: 24px 0;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 20px;
     }
 
     .conditions {
@@ -264,8 +555,37 @@ footer {
     .regle,
     .parcelle,
     .alerte,
+    .environnement,
     .avertissement {
         padding: 16px;
+    }
+
+    .indicateurs {
+        gap: 10px;
+    }
+
+    .indicateur {
+        padding: 14px;
+    }
+
+    .indicateur strong {
+        font-size: 22px;
+    }
+
+    .indicateur h3 {
+        font-size: 12px;
+    }
+
+    .objectif-export {
+        padding: 16px;
+    }
+
+    .objectif-export strong {
+        font-size: 24px;
+    }
+
+    #form-traitement {
+        grid-template-columns: 1fr;
     }
 
     th,
@@ -277,4 +597,14 @@ footer {
     select {
         width: 100%;
     }
+
+    #rapport-btn {
+        width: 100%;
+    }
+}
+
+.objectif-export,
+.indicateurs,
+.objectif {
+    display: none;
 }

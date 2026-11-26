@@ -1,100 +1,266 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Domaine Carrel - Alerte Mildiou</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="container">
-            <h1>Domaine Carrel</h1>
-            <p>Outil de prévention du mildiou</p>
-        </div>
+      <div class="container">
+        <h1>Domaine Carrel</h1>
+        <p>Prévention du mildiou et suivi environnemental</p>
+      </div>
     </header>
 
     <main class="container">
+      <section class="introduction">
+        <h2>Tableau de bord</h2>
+        <p>
+          Consultez les risques de mildiou de vos parcelles, optimisez vos
+          traitements et suivez vos engagements environnementaux.
+        </p>
+        <span class="info">Prototype — Données de démonstration</span>
+      </section>
 
-        <section class="introduction">
-            <h2>Tableau de bord</h2>
-            <p>
-                Consultez les prévisions météorologiques
-                et les risques de mildiou de vos parcelles.
-            </p>
-            <span class="info">Données de démonstration</span>
-        </section>
+      <section class="regle">
+        <h2>Règle des 3 × 10</h2>
 
-        <section class="regle">
-            <h2>Règle des 3 × 10</h2>
+        <div class="conditions">
+          <div class="condition">
+            <h3>Température</h3>
+            <strong>&gt; 10 °C</strong>
+          </div>
 
-            <div class="conditions">
-                <div class="condition">
-                    <h3>Température</h3>
-                    <strong>&gt; 10 °C</strong>
-                </div>
+          <div class="condition">
+            <h3>Précipitations</h3>
+            <strong>&gt; 10 mm</strong>
+          </div>
 
-                <div class="condition">
-                    <h3>Précipitations</h3>
-                    <strong>&gt; 10 mm</strong>
-                </div>
+          <div class="condition">
+            <h3>Pousses de vigne</h3>
+            <strong>&gt; 10 cm</strong>
+          </div>
+        </div>
 
-                <div class="condition">
-                    <h3>Pousses de vigne</h3>
-                    <strong>&gt; 10 cm</strong>
-                </div>
-            </div>
+        <p>Une alerte est générée si les trois conditions sont réunies.</p>
+      </section>
 
-            <p>Une alerte est générée si les trois conditions sont réunies.</p>
-        </section>
+      <section class="previsions">
+        <h2>Prévisions sur 7 jours</h2>
 
-        <section class="previsions">
-            <h2>Prévisions sur 7 jours</h2>
-            <div id="resultats">
-                Chargement des données...
-            </div>
-        </section>
+        <div id="resultats">Chargement des données...</div>
+      </section>
 
-        <section class="alerte">
-            <h2>SMS d'alerte quotidien</h2>
+      <section class="alerte">
+        <h2>SMS d'alerte quotidien</h2>
 
-            <label for="jour">Sélectionner un jour :</label>
+        <label for="jour">Sélectionner un jour :</label>
 
-            <select id="jour">
-                <option value="Lundi">Lundi</option>
-                <option value="Mardi">Mardi</option>
-                <option value="Mercredi">Mercredi</option>
-                <option value="Jeudi">Jeudi</option>
-                <option value="Vendredi">Vendredi</option>
-                <option value="Samedi">Samedi</option>
-                <option value="Dimanche">Dimanche</option>
+        <select id="jour">
+          <option value="Lundi">Lundi</option>
+          <option value="Mardi">Mardi</option>
+          <option value="Mercredi">Mercredi</option>
+          <option value="Jeudi">Jeudi</option>
+          <option value="Vendredi">Vendredi</option>
+          <option value="Samedi">Samedi</option>
+          <option value="Dimanche">Dimanche</option>
+        </select>
+
+        <div id="sms" aria-live="polite">Chargement du message...</div>
+
+        <p class="info">Simulation du SMS — aucun envoi réel.</p>
+      </section>
+
+      <section class="environnement">
+        <h2>Registre des traitements</h2>
+
+        <p>
+          Enregistrez et consultez les traitements phytosanitaires réalisés sur
+          vos parcelles.
+        </p>
+
+        <div class="objectif-export">
+          <span class="export-label"> Opportunité commerciale — Japon </span>
+
+          <strong>20 000 bouteilles / an</strong>
+
+          <h3>360 000 € de chiffre d'affaires potentiel</h3>
+
+          <p>
+            Contrat conditionné à la démonstration d'une réduction des
+            traitements phytosanitaires. Estimation au prix moyen de 18 € par
+            bouteille.
+          </p>
+        </div>
+
+        <div class="indicateurs">
+          <div class="indicateur">
+            <h3>Référence annuelle</h3>
+            <strong id="reference">9</strong>
+            <p>Traitements complets</p>
+          </div>
+
+          <div class="indicateur">
+            <h3>Traitements équivalents</h3>
+            <strong id="total-traitements">—</strong>
+            <p>Surfaces enregistrées</p>
+          </div>
+
+          <div class="indicateur">
+            <h3>Réduction provisoire</h3>
+            <strong id="reduction">—</strong>
+            <p>Par rapport à la référence annuelle</p>
+          </div>
+
+          <div class="indicateur">
+            <h3>Économies estimées</h3>
+            <strong id="economies">—</strong>
+            <p>Simulation financière</p>
+          </div>
+        </div>
+
+        <div class="objectif">
+          <h3>Objectif environnemental</h3>
+          <p>
+            Passer de 9 à 7 traitements complets équivalents par an, soit une
+            réduction ciblée de 22,2 %.
+          </p>
+
+          <p>
+            Économies brutes potentielles :
+            <strong>4 400 € par an</strong>.
+          </p>
+
+          <span class="info">
+            Objectif hypothétique à valider sur le terrain.
+          </span>
+        </div>
+
+        <h3>Enregistrer un traitement</h3>
+
+        <form id="form-traitement">
+          <div class="champ">
+            <label for="date-traitement">Date</label>
+            <input type="date" id="date-traitement" required />
+          </div>
+
+          <div class="champ">
+            <label for="parcelle-traitement">Parcelle</label>
+
+            <select id="parcelle-traitement" required>
+              <option value="Parcelle Haut">Parcelle Haut</option>
+              <option value="Parcelle Bas">Parcelle Bas</option>
+              <option value="Domaine entier">Domaine entier</option>
             </select>
+          </div>
 
-            <div id="sms" aria-live="polite">
-                Chargement du message...
-            </div>
+          <div class="champ">
+            <label for="surface-traitement"> Surface traitée (ha) </label>
 
-            <p class="info">Simulation du SMS — aucun envoi réel.</p>
-        </section>
+            <input
+              type="number"
+              id="surface-traitement"
+              min="0.01"
+              max="14"
+              step="0.01"
+              placeholder="Surface en hectares"
+              required
+            />
+          </div>
 
-        <section class="avertissement">
-            <h3>Aide à la décision</h3>
-            <p>
-                Cet outil fournit une estimation du risque de mildiou.
-                L'absence d'alerte ne garantit pas l'absence de maladie.
-                La décision finale de traitement appartient au vigneron.
-            </p>
-        </section>
+          <div class="champ">
+            <label for="produit-traitement"> Produit utilisé </label>
 
+            <input
+              type="text"
+              id="produit-traitement"
+              placeholder="Nom du produit"
+              required
+            />
+          </div>
+
+          <div class="champ">
+            <label for="dose-traitement"> Dose appliquée </label>
+
+            <input
+              type="text"
+              id="dose-traitement"
+              placeholder="Dose et unité"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn" id="enregistrer-btn">
+            Enregistrer le traitement
+          </button>
+        </form>
+
+        <p id="statut-traitements" class="info" aria-live="polite"></p>
+
+        <h3>Historique des traitements</h3>
+
+        <div class="champ filtre-annee">
+          <label for="annee-traitement"> Année à analyser </label>
+
+          <input
+            type="number"
+            id="annee-traitement"
+            min="2000"
+            max="2100"
+            step="1"
+            required
+          />
+        </div>
+
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Parcelle</th>
+                <th>Surface</th>
+                <th>Produit</th>
+                <th>Dose</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="historique-traitements"></tbody>
+          </table>
+        </div>
+
+        <button id="rapport-btn" class="btn" disabled>
+          Télécharger le rapport environnemental
+        </button>
+
+        <p class="info">
+          Les traitements sont enregistrés localement dans ce navigateur.
+        </p>
+
+        <p class="info">
+          Les indicateurs sont provisoires et ne constituent pas une
+          certification environnementale. Une comparaison fiable nécessite des
+          saisons complètes, des données vérifiées et comparables.
+        </p>
+      </section>
+
+      <section class="avertissement">
+        <h3>Aide à la décision</h3>
+
+        <p>
+          Cet outil fournit une estimation du risque de mildiou. L'absence
+          d'alerte ne garantit pas l'absence de maladie. La décision finale de
+          traitement appartient au vigneron et doit respecter la réglementation.
+        </p>
+      </section>
     </main>
 
     <footer>
-        <p>Domaine Carrel — Prototype d'aide à la décision</p>
+      <p>Domaine Carrel — TP Stratégie IA — B3 DEV</p>
     </footer>
-
-</body>
+  </body>
 </html>

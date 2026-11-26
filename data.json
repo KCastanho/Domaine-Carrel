@@ -1,6 +1,8 @@
 
 {
   "pousses": 15,
+  "surfaceDomaine": 14,
+  "traitementsReference": 9,
   "parcelles": [
     {
       "nom": "Parcelle Haut",
